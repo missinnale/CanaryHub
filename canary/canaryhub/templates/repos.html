@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Canary Github</title>
+</head>
+
+<body>
+    {% if repos %}
+    <ul>
+        {% for repo in repos %}
+        <li>
+            <a href="{% url 'create_hook' %}?full_name={{ repo.full_name }}">
+                {{ repo.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No repositories are available.</p>
+    {% endif %}
+</body>
+
+</html>

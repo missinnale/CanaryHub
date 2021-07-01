@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Canary Github</title>
+</head>
+
+<body>
+    {% if events %}
+    <ul>
+        {% for event in events %}
+        <li>
+
+            <code>
+                    {{ event }}
+                </code>
+
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No repositories are available.</p>
+    {% endif %}
+</body>
+
+</html>
